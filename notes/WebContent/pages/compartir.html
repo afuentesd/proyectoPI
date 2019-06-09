@@ -1,0 +1,36 @@
+		<!--main-->
+		<div class="main_btm">
+			<div class="wrap">
+				<div class="main">
+					<div class="contact">
+						<div class="section group">
+
+							<div class="col span_2_of_4">
+								<div class="contact-form" data-ng-controller="noteShareCtrl as noteShareVM">
+									<h2 class="style">COMPARTIR</h2>
+									<form  name="myForm" data-ng-submit="noteShareVM.functions.createUserNote()" >
+
+										<div>
+											<span><label>Indica el Usuario(*)</label></span>
+											<span>
+												<input id="usuario" name="usuario" type="text" class="textbox" placeholder="Usuario" 
+												data-ng-model="noteShareVM.user.username" required >	
+					
+											</span>
+										</div>					
+
+										<div>
+											<span>											
+												<input type="submit" value="COMPARTIR">																				
+											</span>
+										</div>
+									</form>						
+									
+								</div>
+							</div>
+							<div class="clear"> </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>

@@ -1,0 +1,148 @@
+<!DOCTYPE HTML>
+<html data-ng-app="signUp">
+	<head>
+		<title>Tus Notas | Registro</title>
+		<meta name="description" content="Página para crear notas">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		
+		<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+		
+				 <!-- Include the AngularJS library -->
+		<script src="js/angular/angular.js"></script>		
+		<script src="js/angular/angular-route.js"></script>
+		<!-- Modules -->
+   	 	<script src="js/signup.js"></script>
+    	
+  
+		
+	</head>
+	<body>
+		<div class="btm_border">
+			<div class="h_bg">
+				<div class="wrap">
+					<div class="header">
+						<div class="logo">
+							<a href="IndexServlet"><img src="img/banner.jpg" alt=""></a>
+						</div>
+						
+						<div class="clear"> </div>
+					</div>
+					<div class='h_btm'>
+						<div class='cssmenu'>
+							<ul>
+								
+								<li>
+									<a href='SessionServlet'><span>Iniciar Sesion</span></a>
+								</li>							
+								<li class='active'>
+									<a href='registro.html'><span>Registrarse</span></a>
+								</li>
+							</ul>
+						</div>
+						
+						<div class="clear"> </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--main-->
+		<div class="main_btm">
+			<div class="wrap">
+				<div class="main">
+					<div class="contact">
+						<div class="section group">
+
+							<div class="col span_2_of_4">
+								<div class="contact-form" data-ng-controller="registerCtrl as registerVM">
+									<h2 class="style">Datos de Usuario</h2>
+									<form data-ng-submit="registerVM.functions.addUser()" >
+									
+										<div>
+											<span><label>NOMBRE(*)</label></span>
+											<span>
+												<input id="nombre" name="nombre" type="text" class="textbox" placeholder="Nombre" 
+												data-ng-model="registerVM.user.username"required >	
+					
+											</span>
+										</div>								
+																		
+										
+										<div>
+											<span><label>E-MAIL(*)</label></span>
+											<span>
+												<input id="email" name="email" type="text" class="textbox" placeholder="E-Mail" 
+												data-ng-model="registerVM.user.email" required >	 
+											</span>
+										</div>
+										<div>
+											<span><label>CONTRASEÑA(*)</label></span>
+											<span>												
+												<input id="contrasena" name="contrasena" type="password" class="textbox" placeholder="Contraseña" 
+												data-ng-model="registerVM.user.password" required >	
+											</span>
+										</div>		
+										
+										
+										<div>
+											<span>
+											
+												<input type="submit" value="REGISTRARSE" />
+											
+											</span>
+										</div>
+									</form>
+								</div>
+							</div>
+							<div class="clear"> </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--footer-->
+<div class="footer-bg">
+			<div class="wrap">
+				<div class="footer">
+										
+					<div class="box1">
+						<h4 class="btm">Contacta con nosotros</h4>
+						<div class="box1_address">
+							<p>
+								Escuela Politecnica
+							</p>
+							<p>
+								10001 Caceres
+							</p>
+							<p>
+								España
+							</p>
+							<p>
+								Telefono:  927 25 71 95
+							</p>
+							<p>
+								Fax: 927 257 203
+							</p>
+							<p>
+								Email: <span>adminnotes@gmail.es</span>
+							</p>
+						</div>
+					</div>
+					<div class="clear"> </div>
+				</div>
+			</div>
+		</div>
+		<!--footer1-->
+		<div class="ftr-bg">
+			<div class="wrap">
+				<div class="footer">
+					<div class="copy">
+						© Copyright by Miguel Ros Rincón
+						<img src="img/footer.png" alt="" />
+					</div>
+					<div class="clear"> </div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

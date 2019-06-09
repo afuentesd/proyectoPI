@@ -1,0 +1,65 @@
+
+		<!--main-->
+		<div class="main_btm">
+			<div class="wrap">
+				<div class="main">
+					<div class="contact">
+						<div class="section group">
+
+							<div class="col span_2_of_4">
+								<div class="contact-form" data-ng-controller="editUserCtrl as editUserVM">
+									<h2 class="style">Datos de Usuario</h2>
+									<form data-ng-submit="editUserVM.functions.updateUser()" >
+									
+										<div>
+											<span><label>NOMBRE(*)</label></span>
+											<span>
+												<input id="nombre" name="nombre" type="text" class="textbox" placeholder="Nombre" 
+												value="{{editUserVM.user.username}}" data-ng-model="editUserVM.user.username"required >	
+					
+											</span>
+										</div>								
+																		
+										
+										<div>
+											<span><label>E-MAIL(*)</label></span>
+											<span>
+												<input id="email" name="email" type="text" class="textbox" placeholder="E-Mail" 
+												value="{{editUserVM.user.email}}" data-ng-model="editUserVM.user.email" required >	 
+											</span>
+										</div>
+										<div>
+											<span><label>CONTRASEÑA(*)</label></span>
+											<span>												
+												<input id="contrasena" name="contrasena" type="password" class="textbox" placeholder="Contraseña" 
+												value="{{editUserVM.user.password}}" data-ng-model="editUserVM.user.password" required >	
+											</span>
+										</div>		
+										
+										
+										<div>
+											<span>
+											
+												<input type="submit" value="EDITAR PERFIL" />
+											
+											</span>
+										</div>
+									</form>
+									<form data-ng-submit="editUserVM.functions.deleteUser()">
+									<div>
+											<span>
+											
+												<input type="submit" value="BORRAR PERFIL" />
+											
+											</span>
+										</div>
+									</form>
+								</div>
+							</div>
+							<div class="clear"> </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+

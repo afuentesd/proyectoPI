@@ -1,0 +1,60 @@
+
+<div class="main_btm">
+			<div class="wrap">
+				<div class="main">
+					<div class="contact">
+						<div class="section group">
+
+							<div class="col span_1_of_3">
+							<div class="specials">
+							
+							
+						
+							<div class="specials-heading">
+								
+								<div class="clear"> </div>
+							</div>
+							<div class="clear"> </div>
+							
+							
+						
+								
+							<div class="specials-grids" data-ng-controller="searchCtrl as searchVM">
+							<form  data-ng-submit="searchVM.functions.readNotes()" >
+								<input type="text" name=q size=25 maxlength=255 value="" data-ng-model="searchVM.search">
+								<input type="image" name=btnG value="" src="../img/search.png" size="1px">
+							</form>	
+								
+								<div class="special-grid" data-ng-repeat="note in searchVM.notes">	
+						
+								<a data-ng-href="#!/editNote/{{ note.idn }}" >{{note.title}}</a>
+								<p>{{note.content}}</p>	
+								
+								<div class="contact-form">
+								<form   name="myForm" >
+								<a data-ng-href="#!/shareNote/{{ note.idn }}">	<input type="submit" value="Compartir" ></a>
+								</form>
+								</div>
+																				
+								</div>	
+										
+								
+								<div class="clear"> </div>
+								
+								
+								
+								<div class="clear"> </div>
+								
+								
+								<div class="clear"> </div>
+							
+							</div>
+							
+							<div class="clear"> </div>
+						</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>				

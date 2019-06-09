@@ -1,0 +1,108 @@
+ html { 
+    font-size: large;
+    font-family: sans-serif;
+    border: 3px solid #70C332;
+    border-radius: 10px;
+    width: 95%;
+    padding: 0.2em;  
+    position: relative;
+  }
+  
+   #list{ 
+    border: none;
+  }
+
+  body {
+    margin: auto;
+  }
+  
+  p {
+    margin-top: 0.1em;
+    margin-bottom: 0.1em;
+    position: relative;
+  }
+
+  h1 {
+    color: #70C332;
+    display: inline-block;
+  }
+
+  fieldset {
+    background-color: #eee;
+    border: 3px solid #70C332;
+    border-radius: 10px;
+  }
+
+  input , textarea  { 
+    font-size: large; 
+    border: 3px solid #70C332; 
+    color: #666; 
+    background: #fff;
+    border-radius: 0.6em;
+    padding-left: 0.6em;
+  }
+
+  input:focus, textarea:focus { 
+    background: #eee;
+  }
+
+  #size {
+    width:30%;
+    display: inline-block;
+    margin-right: 0em;
+  }
+
+  #toppings {
+    width:55%;
+    display: inline-block;
+    margin-left: 0em;
+  }
+
+  textarea {
+    width: 96%;
+  }
+
+  #button {
+    position: absolute;
+    top: 35px;
+    right: 0.5em;
+    background: #aaa;
+    color: white;
+    border: none;
+  }
+
+ #button:hover {
+   background: #70C332;
+   cursor:pointer;
+ }
+
+  div {
+    position: relative;
+    margin-top: 0.8em;
+    margin-bottom: 0.8em;
+    border: 2px solid #70C332;
+    border-radius: 5px;
+    width: 30%;
+    display: inline-block;
+  }
+
+  .personaldata {
+    position: absolute;
+    right: 0.3em;
+  }
+  
+  table {
+  border: 3px solid #70C332;
+  border-radius: 10px;
+  }
+  
+  td, th {
+  border: thin dotted #70C332;
+  border-radius: 5px;
+  padding: 5px;
+  }
+  h1 .icono{
+  text-align: center;
+  vertical-align:middle;
+  }
+  

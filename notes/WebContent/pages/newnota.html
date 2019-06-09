@@ -1,0 +1,64 @@
+
+
+		<div class="main_btm">
+			<div class="wrap">
+				<div class="main">
+					<div class="contact">
+						<div class="section group">
+
+							<div class="col span_2_of_4">
+								<div class="contact-form" data-ng-controller="noteHandlerCtrl as noteHandlerVM">
+									<h2 class="style" data-ng-show="noteHandlerVM.functions.where('/newNote')">Crear Nota</h2>
+									<h2 class="style" data-ng-show="noteHandlerVM.functions.where('/editNote/'+noteHandlerVM.note.idn)">Editar Nota</h2>
+									<form name="myForm" data-ng-submit="noteHandlerVM.functions.noteHandlerSwitcher()" >
+									
+										<div>
+											<span><label>TITULO(*)</label></span>
+											<span>
+												<input id="titulo" name="titulo" type="text" class="textbox" placeholder="Titulo"
+													data-ng-model="noteHandlerVM.note.title" required >	
+					
+											</span>
+										</div>								
+																		
+										
+										<div>
+											<span><label>CONTENIDO(*)</label></span>
+											<span>
+												<input id="contenido" name="contenido" type="text" class="textbox" placeholder="Contenido"
+												 data-ng-model="noteHandlerVM.note.content" required >	 
+											</span>
+										</div>
+										<span><label data-ng-show="noteHandlerVM.functions.where('/editNote/'+noteHandlerVM.note.idn)">ARCHIVAR</label></span>
+										<input type="checkbox" name="archivar" value="1" data-ng-model="noteHandlerVM.usernote.archived" data-ng-true-value=1 data-ng-false-value=0 data-ng-show="noteHandlerVM.functions.where('/editNote/'+noteHandlerVM.note.idn)" />
+										<span><label data-ng-show="noteHandlerVM.functions.where('/editNote/'+noteHandlerVM.note.idn)">FIJAR</label></span>
+										<input type="checkbox" name="fijar" value="1" data-ng-model="noteHandlerVM.usernote.pinned" data-ng-true-value=1 data-ng-false-value=0 data-ng-show="noteHandlerVM.functions.where('/editNote/'+noteHandlerVM.note.idn)"/>
+												
+										
+										
+										<div>
+											<span>
+												<input type="submit" value="CREAR" 
+												data-ng-show="noteHandlerVM.functions.where('/newNote')">
+												
+												<input type="submit" value="EDITAR" 
+												data-ng-show="noteHandlerVM.functions.where('/editNote/'+noteHandlerVM.note.idn)">
+																												
+											</span>
+										</div>
+									</form>
+									<form data-ng-if="noteHandlerVM.functions.where('/editNote/'+noteHandlerVM.note.idn)" data-ng-submit="noteHandlerVM.functions.deleteNote()">
+											<span>	
+												<input type="submit" value="BORRAR" >
+												
+											</span>
+									</form>
+								</div>
+							</div>
+							<div class="clear"> </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
